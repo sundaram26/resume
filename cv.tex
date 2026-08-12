@@ -14,7 +14,7 @@
 \usepackage{titlesec}				
 \usepackage{multicol}
 \usepackage{multirow}
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\large\scshape\raggedright\color{linkcolour}}{}{0em}{}[\color{linkcolour}\titlerule]
 \titlespacing{\section}{0pt}{3pt}{2pt}
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
@@ -50,7 +50,7 @@
 \pagestyle{empty} 
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\huge{Sundaram Singh} \\[4pt]
+\huge{\textcolor{linkcolour}{Sundaram Singh}} \\[4pt]
 GitHub: sundaram26 \ $|$ \ 
 LinkedIn: singhsundaram \ $|$ \ 
 Email: singhsundaram2004@gmail.com \ $|$ \ 
@@ -70,6 +70,15 @@ Backend-focused Full-Stack Developer (1.5+ yrs) building production systems for 
 \item Leading development of a multi-tenant AI chatbot SaaS (pre-launch) — architecting knowledge-base integration and embeddable script support for client websites from the ground up.
 \end{joblong}
   
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Languages} & \normalsize{TypeScript/JavaScript, Go, Python, SQL}\\
+\textbf{Backend} & \normalsize{Node.js, Express.js, tRPC, Prisma, PostgreSQL, Redis, BullMQ, MongoDB}\\
+\textbf{AI/ML} & \normalsize{OpenAI, Anthropic, Gemini APIs, Qdrant (Vector DB), RAG/Agentic Pipelines}\\
+\textbf{Frontend} & \normalsize{React.js, Next.js, TailwindCSS, Zustand, React Query}\\
+\textbf{DevOps/Tools} & \normalsize{Docker, Nginx, Git, GitHub Actions (CI/CD), Grafana, Prometheus, Postman, Linux, VPS Hosting}\\
+\end{tabularx}
+
 \section{Projects}
 
 \begin{joblong}{Weave — Multi-Provider AI Agent SDK}{GitHub $|$ weave.sundaramsingh.com}
@@ -106,13 +115,6 @@ Backend-focused Full-Stack Developer (1.5+ yrs) building production systems for 
 \noindent \textbf{Maharashtra State Board} \hfill \textbf{Balashaheb Mhatre College of Science \& Commerce, Badlapur} \\
 \textit{Higher Secondary Certificate (Class 12) — 82\%} \hfill \textit{2020 – 2021}
 
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Languages} & \normalsize{TypeScript/JavaScript, Go, Python, SQL}\\
-\textbf{Backend} & \normalsize{Node.js, Express.js, tRPC, Prisma, PostgreSQL, Redis, BullMQ, MongoDB}\\
-\textbf{AI/ML} & \normalsize{OpenAI, Anthropic, Gemini APIs, Qdrant (Vector DB), RAG/Agentic Pipelines}\\
-\textbf{Frontend} & \normalsize{React.js, Next.js, TailwindCSS, Zustand, React Query}\\
-\textbf{DevOps/Tools} & \normalsize{Docker, Nginx, Git, GitHub Actions (CI/CD), Grafana, Prometheus, Postman, Linux, VPS Hosting}\\
-\end{tabularx}
+
 
 \end{document}
