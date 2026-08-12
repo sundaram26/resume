@@ -1,108 +1,29 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
-%
-%	Copyright (c) 2021 Jitin Nair
-%
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%	
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%	
-%
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
-
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
+\documentclass[a4paper,10pt]{article}
 \usepackage{url}
 \usepackage{parskip} 	
-
-%other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-%tabularx environment
+\usepackage[a4paper,left=0.5in,right=0.5in,top=0.3in,bottom=0.3in]{geometry}
 \usepackage{tabularx}
-
-%for lists within experience section
 \usepackage{enumitem}
-
-% centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
 \usepackage{supertabular}
-\usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
 \usepackage{titlesec}				
 \usepackage{multicol}
 \usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{2pt}
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
 
-%for social icons
-\usepackage{fontawesome5}
-
-%debug page outer frames
-%\usepackage{showframe}
-
-
-% job listing environments
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[1pt]
     \end{tabularx}
     }
     {
@@ -111,75 +32,54 @@
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[1pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=0pt,topsep=0pt]
     }
     {
     \end{itemize}
     \end{minipage}    
     }
 
+\setlength{\parskip}{1pt}
 
-
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
 \begin{document}
-
-% non-numbered pages
+\renewcommand{\arraystretch}{0.85}
+\linespread{0.94}
 \pagestyle{empty} 
 
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Sundaram Singh} \\[7.5pt]
-\href{https://github.com/sundaram26}{\raisebox{-0.05\height}\faGithub\ sundaram26} \ $|$ \ 
-\href{https://linkedin.com/in/singhsundaram}{\raisebox{-0.05\height}\faLinkedin\ singhsundaram} \ $|$ \ 
-% \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:singhsundaram2004@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ singhsundaram2004@gmail.com} \ $|$ \ 
-\href{tel:+917666713062}{\raisebox{-0.05\height}\faMobile \ +91-7666713062} \\
+\huge{Sundaram Singh} \\[4pt]
+GitHub: sundaram26 \ $|$ \ 
+LinkedIn: singhsundaram \ $|$ \ 
+Email: singhsundaram2004@gmail.com \ $|$ \ 
+Phone: +91-7666713062 \\
 \end{tabularx}
 
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
-
-%Interests/ Keywords/ Summary
+\vspace{1pt}
 \section{Summary}
 Backend-focused Full-Stack Developer (1.5+ yrs) building production systems for a service marketplace platform --- API architecture, multi-gateway payments, and observability --- on lean, cost-conscious infrastructure. Currently leading a multi-tenant AI chatbot SaaS from the ground up. Core stack: Node.js/Express, Next.js/React, PostgreSQL, Redis, Qdrant, Docker.
 
-%Experience
 \section{Work Experience}
 
 \begin{joblong}{Full-Stack Developer $|$ Techmasworld Infotech Pvt. Ltd.}{May 2025 - Present}
-\item Own backend architecture and API design for a service marketplace platform (Next.js, Node.js, PostgreSQL) serving 25k+ daily requests, within a lean 2–3 person engineering team at an early-stage startup.
+\item Own backend architecture, API design, and infrastructure decisions for a service marketplace platform (Next.js, Node.js, PostgreSQL) serving 25k+ daily requests on a cost-constrained single-VPS deployment (Nginx, Docker), within a lean 2–3 person team.
 \item Designed and integrated a multi-gateway payment layer (PhonePe, Razorpay, PayPal) into customizable e-commerce modules, along with Shiprocket logistics integration, analytics dashboards, and admin tooling — built to support merchant-specific configuration without code changes per client.
 \item Introduced observability into the marketplace platform by standing up Grafana and Prometheus on the production VPS, giving the team visibility into service health and request patterns that didn't exist before.
-\item Own infrastructure decisions for a cost-constrained, single-VPS deployment (Nginx, Docker) — favoring vertical scaling and operational simplicity over premature distributed infrastructure, appropriate for current traffic and team size.
 \item Leading development of a multi-tenant AI chatbot SaaS (pre-launch) — architecting knowledge-base integration and embeddable script support for client websites from the ground up.
 \end{joblong}
   
-%Projects
 \section{Projects}
 
-\begin{joblong}{Weave — Multi-Provider AI Agent SDK}{\href{https://github.com/sundaram26/AgentSdk}{GitHub} $|$ \href{https://weave.sundaramsingh.com}{weave.sundaramsingh.com}}
+\begin{joblong}{Weave — Multi-Provider AI Agent SDK}{GitHub $|$ weave.sundaramsingh.com}
 \item Built a TypeScript AI agent SDK with a runtime state machine, multi-agent handoffs, and a 3-tier memory system (factual, episodic, session) with automated context pruning.
 \item Engineered an extensible guardrails engine with prompt-injection detection, PII redaction, tool-boundary enforcement, and LLM-based policy classification to control agent/tool execution.
 \item Designed a provider-agnostic LLM layer supporting OpenAI, Claude, and Gemini with automatic failover and structured-output validation with schema-based self-repair.
 \item Developed and deployed production documentation and a public landing page, enabling external developers to evaluate and integrate the SDK.
 \end{joblong}
 
-\begin{joblong}{Nodebase — Workflow Automation Platform}{\href{https://github.com/sundaram26/nodebase}{GitHub} $|$ \href{https://nodebase.sundaramsingh.com}{nodebase.sundaramsingh.com}}
+\begin{joblong}{Nodebase — Workflow Automation Platform}{GitHub $|$ nodebase.sundaramsingh.com}
 \item Engineered a full-stack workflow automation platform using Next.js, TypeScript, tRPC, and PostgreSQL, with typed APIs and persistent workflow state.
 \item Built a React Flow-based drag-and-drop workflow builder, translating visual node graphs into executable trigger-action pipelines.
 \item Designed a unified event-driven execution engine supporting Google Forms, Stripe webhooks, and manual triggers for workflow dispatch.
@@ -187,40 +87,25 @@ Backend-focused Full-Stack Developer (1.5+ yrs) building production systems for 
 \item Structured workflow execution as stateless, independently executable jobs, enabling migration to queue-based processing with Inngest as workload increases.
 \end{joblong}
 
-\begin{joblong}{Noetalm — Grounded AI Research \& Synthesis Platform}{\href{https://github.com/sundaram26/mybooklm}{GitHub} $|$ \href{https://noetalm.sundaramsingh.com}{noetalm.sundaramsingh.com}}
+\begin{joblong}{Noetalm — Grounded AI Research \& Synthesis Platform}{GitHub $|$ noetalm.sundaramsingh.com}
 \item Built a 4-stage agentic RAG pipeline (query rewriting, HyDE, Qdrant vector recall, LLM reranking) for high-precision retrieval over user documents
 \item Designed a 3-tier multi-provider LLM router (Gemini, OpenAI, Anthropic) with automatic fallback and inline source citations to ground outputs and reduce hallucination
 \item Engineered an async multimodal ingestion pipeline (BullMQ, Redis) parsing PDFs, DOCX, and YouTube video/playlists into chunked, embedded vector data
 \item Built the backend on Express, TypeScript, Prisma/PostgreSQL, and Redis, with a rate-limiter middleware protecting the API
 \end{joblong}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
 \section{Education}
 \noindent \textbf{Mumbai University} \hfill \textbf{Distance Education Program(CDOE)} \\
 \textit{MCA — Pursuing (3rd Semester)} \hfill \textit{2024 – 2026 (Expected)}
 
-\vspace{4pt}
+\vspace{1pt}
 \noindent \textbf{Mumbai University} \hfill \textbf{B.K. Birla College, Kalyan} \\
 \textit{B.Sc. in Computer Science — Avg. CGPA: 9.83} \hfill \textit{2022 – 2025}
 
-\vspace{4pt}
+\vspace{1pt}
 \noindent \textbf{Maharashtra State Board} \hfill \textbf{Balashaheb Mhatre College of Science \& Commerce, Badlapur} \\
 \textit{Higher Secondary Certificate (Class 12) — 82\%} \hfill \textit{2020 – 2021}
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-% \section{Publications}
-% \begin{refsection}[citations.bib]
-% \nocite{*}
-% \printbibliography[heading=none]
-% \end{refsection}
-
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \textbf{Languages} & \normalsize{TypeScript/JavaScript, Go, Python, SQL}\\
@@ -229,8 +114,5 @@ Backend-focused Full-Stack Developer (1.5+ yrs) building production systems for 
 \textbf{Frontend} & \normalsize{React.js, Next.js, TailwindCSS, Zustand, React Query}\\
 \textbf{DevOps/Tools} & \normalsize{Docker, Nginx, Git, GitHub Actions (CI/CD), Grafana, Prometheus, Postman, Linux, VPS Hosting}\\
 \end{tabularx}
-
-\vfill
-\center{\footnotesize Last updated: \today}
 
 \end{document}
